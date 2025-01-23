@@ -35,9 +35,9 @@ export default function RootLayout() {
         </View>
 
         <View className="gap-y-[1.5vh]">
-          <Participant />
-
-          <Participant />
+          <Participant name="Wevison" />
+          <Participant name="Diego" />
+          <Participant name="Rodrigo" />
         </View>
       </View>
     </SafeAreaView>
