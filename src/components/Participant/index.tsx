@@ -7,7 +7,7 @@ interface ParticipantProps {
 
 export function Participant({ name, onRemove }: ParticipantProps) {
   return (
-    <View className="flex-row gap-x-[3vw]">
+    <View className="flex-row gap-x-[3vw] mb-[1.5vh]">
       <View className="flex-1 w-full bg-gray-700 h-[5vh] rounded-[1.35vw] px-[.5vw] text-[3.5vw] items-center flex-row">
         <Text className="text-white px-[4vw]">{name}</Text>
       </View>
