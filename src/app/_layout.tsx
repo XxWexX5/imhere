@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TextInputChangeEventData,
   NativeSyntheticEvent,
+  ScrollView,
 } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,6 +23,8 @@ export default function RootLayout() {
   const [name, setName] = useState("");
 
   function handleParticipantAdd() {
+    if (name === "") return;
+
     setParticipants([...participants, { name: name }]);
 
     return setName("");
@@ -43,7 +46,6 @@ export default function RootLayout() {
           Sexta, 4 de Novembro de 2022.
         </Text>
       </View>
-
       <View className="gap-y-[5vh]">
         <View className="flex-row gap-x-[3vw] mt-[2vh]">
           <TextInput
@@ -61,15 +63,17 @@ export default function RootLayout() {
           </TouchableOpacity>
         </View>
 
-        <View className="gap-y-[1.5vh]">
-          {participants.map((participant, id) => (
-            <Participant
-              key={`${participant.name}-${id}`}
-              name={participant.name}
-              handleParticipantRemove={handleParticipantRemove}
-            />
-          ))}
-        </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View className="gap-y-[1.5vh]">
+            {participants.map((participant, id) => (
+              <Participant
+                key={`${participant.name}-${id}`}
+                name={participant.name}
+                onRemove={handleParticipantRemove}
+              />
+            ))}
+          </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
