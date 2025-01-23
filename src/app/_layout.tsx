@@ -1,13 +1,38 @@
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  TextInputChangeEventData,
+  NativeSyntheticEvent,
+} from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import "../styles/global.css";
 import { Participant } from "../components/Participant";
+import { useState } from "react";
+
+type ParticipantType = {
+  name: string;
+};
 
 export default function RootLayout() {
+  const [participants, setParticipants] = useState<ParticipantType[]>([]);
+  const [name, setName] = useState("");
+
   function handleParticipantAdd() {
-    console.log("Here!");
+    setParticipants([...participants, { name: name }]);
+
+    return setName("");
+  }
+
+  function handleParticipantRemove(name: string) {
+    const removeParticipant = participants.filter(
+      (participant) => participant.name !== name
+    );
+
+    return setParticipants(removeParticipant);
   }
 
   return (
@@ -24,6 +49,8 @@ export default function RootLayout() {
           <TextInput
             className="flex-1 h-[5vh] rounded-[1.35vw] bg-gray-700 text-white px-[4vw] text-[3.5vw]"
             placeholder="Nome do participante"
+            onChangeText={(value) => setName(value)}
+            value={name}
           />
 
           <TouchableOpacity
@@ -35,9 +62,13 @@ export default function RootLayout() {
         </View>
 
         <View className="gap-y-[1.5vh]">
-          <Participant name="Wevison" />
-          <Participant name="Diego" />
-          <Participant name="Rodrigo" />
+          {participants.map((participant, id) => (
+            <Participant
+              key={`${participant.name}-${id}`}
+              name={participant.name}
+              handleParticipantRemove={handleParticipantRemove}
+            />
+          ))}
         </View>
       </View>
     </SafeAreaView>
