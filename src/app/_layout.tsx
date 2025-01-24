@@ -34,7 +34,7 @@ export default function RootLayout() {
       return Toast.error("Já está na lista!");
     }
 
-    setParticipants([...participants, { name: name }]);
+    setParticipants((prevState) => [...prevState, { name: name }]);
 
     setName("");
 
@@ -46,7 +46,9 @@ export default function RootLayout() {
       (participant) => participant.name !== name
     );
 
-    return setParticipants(removeParticipant);
+    setParticipants(removeParticipant);
+
+    return Toast.success("Removido!");
   }
 
   return (
@@ -73,7 +75,7 @@ export default function RootLayout() {
             <TextInput
               className="flex-1 h-[5vh] rounded-[1.35vw] bg-gray-700 text-white px-[4vw] text-[3.5vw]"
               placeholder="Nome do participante"
-              onChangeText={(value) => setName(value)}
+              onChangeText={setName}
               value={name}
             />
 
