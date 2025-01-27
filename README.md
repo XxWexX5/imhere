@@ -20,6 +20,34 @@ O Imhere é uma aplicação móvel desenvolvida com React Native, Expo e Tailwin
 - Expo: Ferramenta para facilitar a criação e o gerenciamento de projetos React Native.
 - Tailwind CSS: Framework de CSS para a estilização rápida e responsiva da interface.
 
+## Como Executar o Projeto
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas:
+
+- Node.js
+- Expo CLI
+- Um emulador Android/iOS configurado ou dispositivo físico com o app Expo Go instalado
+
+### Passos:
+
+- **Clone este repositório:**
+git clone https://github.com/seu-usuario/todo-rocket.git
+
+- **Acesse a pasta do projeto:**
+cd todo-rocket
+
+- **Instale as dependências:**
+npm install
+
+- **Inicie o servidor de desenvolvimento:**
+expo start
+
+- Escaneie o QR Code exibido no terminal com o aplicativo Expo Go ou abra o projeto no emulador configurado.
+
 ### Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
