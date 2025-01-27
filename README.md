@@ -8,17 +8,17 @@
 
 O Imhere é uma aplicação móvel desenvolvida com React Native, Expo e Tailwind CSS para controle de eventos. O principal objetivo é permitir aos organizadores de eventos adicionar e remover participantes de maneira fácil e rápida.
 
-## Tecnologias Utilizadas
-
-- React Native: Framework utilizado para o desenvolvimento de aplicativos móveis.
-- Expo: Ferramenta para facilitar a criação e o gerenciamento de projetos React Native.
-- Tailwind CSS: Framework de CSS para a estilização rápida e responsiva da interface.
-
 ## Funcionalidades
 
 - Adicionar Participantes: O organizador pode adicionar participantes ao evento informando nome e e-mail.
 - Remover Participantes: O organizador pode remover um participante da lista de presentes.
 - Visualizar Participantes: Exibe uma lista com os participantes adicionados ao evento.
+
+## Tecnologias Utilizadas
+
+- React Native: Framework utilizado para o desenvolvimento de aplicativos móveis.
+- Expo: Ferramenta para facilitar a criação e o gerenciamento de projetos React Native.
+- Tailwind CSS: Framework de CSS para a estilização rápida e responsiva da interface.
 
 ### Licença
 
