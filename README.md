@@ -1,6 +1,6 @@
 # Imhere
 
-## Descrição do Projeto
+### Descrição do Projeto
 
 O Imhere é uma aplicação móvel desenvolvida com React Native, Expo e Tailwind CSS para controle de eventos. O principal objetivo é permitir aos organizadores de eventos adicionar e remover participantes de maneira fácil e rápida.
 
