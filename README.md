@@ -19,3 +19,7 @@ O Imhere é uma aplicação móvel desenvolvida com React Native, Expo e Tailwin
 - Adicionar Participantes: O organizador pode adicionar participantes ao evento informando nome e e-mail.
 - Remover Participantes: O organizador pode remover um participante da lista de presentes.
 - Visualizar Participantes: Exibe uma lista com os participantes adicionados ao evento.
+
+### Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
