@@ -35,7 +35,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 ### Passos:
 
 - **Clone este repositório:**
-git clone https://github.com/seu-usuario/todo-rocket.git
+git clone https://github.com/XxWexX5/imhere
 
 - **Acesse a pasta do projeto:**
 cd todo-rocket
